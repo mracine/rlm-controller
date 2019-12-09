@@ -1,0 +1,16 @@
+{
+	"BIN_DIR": "bin",
+	"RESOURCES_DIR": "resources",
+	"MATRIX_COLS": 32,
+	"MATRIX_ROWS": 32,
+	"SLOWDOWN_GPIO": 0,
+	"IMAGE_FILETYPES": ["png", "jpg", "gif"],
+	"VIDEO_FILETYPES": ["mkv"],
+	"CENTER_IMAGES": true,
+	"IMG_WAIT_SECS": 10,
+	"ANIM_STOP_SECS": 30,
+	"ANIM_LOOP_COUNT": 5,
+	"ANIM_DELAY_MS": -1,
+	"LOOP_FOREVER": true,
+	"SHUFFLE": false
+}

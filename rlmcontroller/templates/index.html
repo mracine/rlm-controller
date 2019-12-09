@@ -1,0 +1,49 @@
+<!-- Main control page for RGB LED Matrix -->
+<html lang="en">
+	<head>
+		<!-- Vue.js -->
+		<!-- Uncomment for development version -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<!--<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>-->
+
+		<!-- Might be a good idea to look at this https://proto.io/freebies/onoff/ -->
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/control.css') }}">
+	</head>
+	<body>
+		<div>
+			<h1>RPi RGB LED Matrix Control</h1>
+		</div>
+		<div id="control-app">
+			<div>
+				<switch-led 
+				 :checked="poweron"
+				 @change="poweron = $event">
+				</switch-led>
+			</div>
+
+			<br><br>
+
+			<div>
+				<current-image-thumbnail
+				 src="{{ url_for('static', filename='img/default.png') }}" 
+				 alt="Could not retrieve last displayed image from server">
+				</current-image-thumbnail>
+			</div>
+
+			<br><br>
+
+			<div>
+				<open-image-file 
+				 :poweron="poweron">
+				</open-image-file>
+			</div>
+<!--
+			<div class="slidecontainer">
+				<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+			</div>-->
+		</div>
+
+		<script src="{{ url_for('static', filename='js/control.js') }}"></script>
+	</body>
+</html>
